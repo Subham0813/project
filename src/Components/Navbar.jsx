@@ -1,29 +1,32 @@
 import PropTypes from "prop-types";
-import './Navbar.css'
-
+import "./Navbar.css";
 
 const Navbar = ({ image }) => {
   return (
     <>
-    <nav className="navbar">
-    <div className="container">
-      
-     <img src={image} alt="" className="navbar-brand"/>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Collections</a></li>
-        <li><a href="#">Stories</a></li>
-        <li><a href="#">Contact us</a></li>
-      </ul>
-      
-    </div>
-  </nav>
+      <nav className="container">
+        <img src={image} alt="" className="navbar-brand" />
+        <ul className="nav-menu">
+          <li id="wrapper">
+            <a href="#">Home</a>
+          </li>
+          <li id="wrapper">
+            <a href="#">Collections</a>
+          </li>
+          <li id="wrapper">
+            <a href="#">Stories</a>
+          </li>
+          <li id="wrapper">
+            <a href="#">Contact us</a>
+          </li>
+        </ul>
+      </nav>
     </>
   );
-}
+};
 
 Navbar.propTypes = {
-    image: PropTypes.any,
-}
+  image: PropTypes.any,
+};
 
 export default Navbar;

@@ -1,36 +1,50 @@
-.container{
-    width: auto;
-    height: auto;
-    display: flex;
-    align-items:center;
-    justify-content: space-between;
-    background: transparent;
+.container,
+footer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-.navbar-brand{
-    width: 50px;
-    cursor: pointer;
-}
-ul{
-    flex: 1;
-    list-style-type: none;
-    text-align:end;
-}
-ul li{
-    
-    display: inline-block;
-    margin: 10px 10px;
-    font-family: cursive;
-    font-size:small;
-    cursor: pointer;
-}
-ul li a{
-    text-decoration: none;
-    color: #fbf7f7;
-}
-/*ul li:hover {
-    color: #fbf7f7;
-}*/
-/*ul li:active {
-    color: #15c8e3;
-  }*/
 
+.navbar-brand {
+  width: 50px;
+}
+
+.nav-menu {
+  display: flex;
+}
+
+a {
+  text-decoration: none;
+  color: #fbf7f7;
+}
+
+#wrapper {
+  padding: 0.1em 0.3em;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden; /* Keep the animation within bounds */
+}
+
+#wrapper a {
+  position: relative;
+  z-index: 1;
+}
+
+#wrapper::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: #f7bb03;
+  z-index: 0;
+  transition: width 0.8s ease-in;
+}
+
+#wrapper:hover::before {
+  width: 100%;
+}
