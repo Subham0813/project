@@ -1,0 +1,36 @@
+.container{
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    background: transparent;
+}
+.navbar-brand{
+    width: 50px;
+    cursor: pointer;
+}
+ul{
+    flex: 1;
+    list-style-type: none;
+    text-align:end;
+}
+ul li{
+    
+    display: inline-block;
+    margin: 10px 10px;
+    font-family: cursive;
+    font-size:small;
+    cursor: pointer;
+}
+ul li a{
+    text-decoration: none;
+    color: #fbf7f7;
+}
+/*ul li:hover {
+    color: #fbf7f7;
+}*/
+/*ul li:active {
+    color: #15c8e3;
+  }*/
+
